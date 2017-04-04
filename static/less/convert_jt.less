@@ -1,0 +1,395 @@
+@charset "UTF-8";
+@import (reference) "./../common/functions";
+
+@root: './../../static/images/JT/';
+
+#page_main_1{
+  .nav-list{
+    > li:nth-child(1){
+      .bg-x-jt("nav_yc.png");
+      background-size: 87%;
+      background-position: center;
+    }
+    > li:nth-child(2){
+      .bg-x-jt("nav_mj.png");
+      background-size: 87%;
+      background-position: center;
+    }
+    > li:nth-child(3){
+      .bg-x-jt("nav_qs.png");
+      background-size: 87%;
+      background-position: center;
+    }
+    > li{
+      width: 33.33%;
+    }
+  }
+}
+#page_main_1_mj {
+  .bg-curtain {
+    .bg-x-jt('curtain.jpg');
+  }
+
+  .bg-compass {
+    .bg-x-jt('compass.jpg');
+  }
+
+  .bg-god {
+    .bg-x-jt('god.png');
+  }
+
+  //.bg-renchun {
+  //  .bg-x-jt('renchun.jpg');
+  //}
+
+
+  .bg-book {
+    //.bg-x-jt('book.png');
+    &.book1{
+      .bg-x-jt('book1.jpg');
+      background-size: contain;
+      background-position: center;
+    }
+    &.book2{
+      .bg-x-jt('book2.jpg');
+      background-size: contain;
+      background-position: center;
+    }
+    &.book3{
+      .bg-x-jt('book3.jpg');
+      background-size: contain;
+      background-position: center;
+    }
+    &.book4{
+      .bg-x-jt('book4.jpg');
+      background-size: contain;
+      background-position: center;
+    }
+    &.book5{
+      .bg-x-jt('book5.jpg');
+      background-size: contain;
+      background-position: center;
+    }
+    &.book6{
+      .bg-x-jt('book6.jpg');
+      background-size: contain;
+      background-position: center;
+    }
+  }
+}
+
+.page_qs{
+  .banner-1{
+    .bg-x-jt("bg_qs_1.png");
+  }
+  .banner-3{
+    .bg-x-jt("bg_qs_3.jpg");
+  }
+  .page-block{
+    .b-header{
+      background-position: 50% 50%;
+    }
+    &.consult{
+      .b-header{
+        .bg-x-jt("title_item.png");
+        background-size: auto 100%;
+      }
+    }
+    &.teacher{
+      .b-header{
+        .bg-x-jt("title_teacher.png");
+        background-size: auto 100%;
+      }
+    }
+    &.process{
+      .b-header{
+        .bg-x-jt("title_process.png");
+        background-size: auto 100%;
+        -webkit-background-size: auto 100%;
+      }
+    }
+    &.recommend{
+      .b-header{
+        .bg-x-jt("title_recommend.png");
+        background-size: auto 100%;
+      }
+    }
+  }
+}
+
+.page-main-1-yc{
+  // BANNER
+  .banner {
+    .bg(@rootYC; 'jt_banner.jpg');
+  }
+
+  // HEADER
+  .header {
+    .bg(@rootYC; 'jt_header.png');
+  }
+
+  // GRID
+  .grid(@n, @i: 1) when (@i <= @n) {
+    .grid-@{i} {
+      .bg(@rootYC; 'jt_grid_@{i}.png');
+    }
+
+    .grid(@n, (@i + 1));
+  }
+  .grid(7);
+
+  // MORE
+  .more(@n, @i: 1) when (@i <= @n) {
+    .more-item-@{i} {
+      .bg(@rootYC; 'jt_more_@{i}.png');
+    }
+    .more(@n, (@i + 1));
+  }
+  .more(8);
+
+  .more-header {
+    .bg(@rootYC; 'jt_more.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+.page-main-2-index{
+  .banner {
+    .bg-x-jt('banner.gif');
+  }
+  .liulian {
+    .bg-x-jt('liulian.jpg');
+    .bt {
+      .bg-x-jt('liulian-bt.gif');
+    }
+  }
+  .box {
+    .bg-x-jt('box.jpg');
+    .bt {
+      .bg-x-jt('box-bt.gif');
+    }
+  }
+  .new-year {
+    .bg-x-jt('new-year.jpg');
+    .bt {
+      .bg-x-jt('new-year-bt.gif');
+    }
+  }
+  .xiang {
+    .bg-x-jt('xiang.jpg');
+    .bt {
+      .bg-x-jt('xiang-bt.gif');
+    }
+  }
+  .consult {
+    .bg-x-jt('consult.jpg');
+    .bt {
+      .bg-x-jt('consult-bt.gif');
+    }
+  }
+  .pray {
+    .bg-x-jt('pray.jpg');
+    .bt {
+      .bg-x-jt('pray-bt.gif');
+    }
+  }
+  .tail {
+    .bg-x-jt('tail.jpg');
+  }
+}
+
+.page-main-3-index{
+  .header {
+    .bg-x-3-jt("header.jpg");
+    .censer{
+      .bg-x-3-jt("censer.png");
+      background-size: contain;
+      background-position: center;
+    }
+  }
+  .piece1 {
+    .bg-x-3-jt('panel1.jpg');
+  }
+  .piece2 {
+    .bg-x-3-jt('panel2.jpg');
+  }
+  .piece3 {
+    .bg-x-3-jt('panel3.jpg');
+  }
+  .piece4 {
+    .bg-x-3-jt('panel4.jpg');
+  }
+  .piece5 {
+    .bg-x-3-jt('panel5.jpg');
+  }
+  .piece6 {
+    .bg-x-3-jt('panel6.jpg');
+  }
+  .piece7 {
+    .bg-x-3-jt('panel7.jpg');
+  }
+  .piece8 {
+    .bg-x-3-jt('panel8.jpg');
+  }
+  .piece9 {
+    .bg-x-3-jt('panel9.jpg');
+  }
+  .piece10 {
+    .bg-x-3-jt('panel10.jpg');
+  }
+  .g1 {
+    .bg-x-3-jt('1.gif');
+  }
+
+  .g2 {
+    .bg-x-3-jt('2.gif');
+  }
+
+  .g3 {
+    .bg-x-3-jt('3.gif');
+  }
+
+  .g4 {
+    .bg-x-3-jt('4.gif');
+  }
+
+  .g5 {
+    .bg-x-3-jt('5.gif');
+  }
+
+  .g6 {
+    .bg-x-3-jt('6.gif');
+  }
+
+  .g7 {
+    .bg-x-3-jt('7.gif');
+  }
+
+  .g8 {
+    .bg-x-3-jt('8.gif');
+  }
+
+  .g9 {
+    .bg-x-3-jt('9.gif');
+  }
+  .g10 {
+    .bg-x-3-jt('10.gif');
+  }
+}
+
+//优惠券弹框
+.pop-coupon{
+  .coupon-win-container{
+    .cw-box{
+      .bg-title{
+        .bg-coupon("jt_bg_title.png");
+      }
+    }
+  }
+}
+
+//大德
+.page-main-3-dade{
+  .banner {
+    .bg(@rootDade; 'jt_banner.jpg');
+  }
+}
+//祈福点灯
+.page-main-3-diandeng{
+  .header {
+    .bg(@rootDiandeng; 'jt_header.gif');
+  }
+}
+
+//祈福台 - 道教
+.page-main-3-qifutai-dao{
+  .section-2 .section-top {
+    .bg(@rootQifutaiDao; 'jt_st2.png');
+  }
+}
+
+//祈福台 - 佛教
+.page-main-3-qifutai-fo{
+  .bgholder {
+    .bg(@rootQifutaiFo; 'jt_bg.png');
+  }
+
+  .section-2 .section-top {
+    .bg(@rootQifutaiFo; 'jt_st2.png');
+  }
+
+  .section-3 .section-top {
+    .bg(@rootQifutaiFo; 'jt_st3.png');
+  }
+}
+
+//拜太岁
+.page-main-3-baitaisui{
+  .s1{
+    .bg(@rootBaitaisui; 'jt_bg.jpg');
+  }
+
+  .card-grid(@n, @i: 1) when (@i <= @n) {
+    .card-grid(@n, (@i + 1));
+    .card-grid:nth-child(@{i}) {
+      .bg(@rootBaitaisui; 'jt_g@{i}.png');
+      background-size: auto 70%;
+    }
+  }
+  .card-grid(4);
+}
+//商城新年活动
+.page-main-1-mj{
+  .g-top{
+    .bg(@rootMj;'banner.jpg');
+    .click{
+      .bg(@rootMj;'btn.png');
+    } 
+  }
+  .sx{
+    .list1{
+      .bg(@rootMj;'mouse.png');      
+    }
+    .list2{
+      .bg(@rootMj;'cow.png');
+    }
+    .list3{
+      .bg(@rootMj;'tiger.png');
+    }
+    .list4{
+      .bg(@rootMj;'rabbit.png');
+    }
+    .list5{
+      .bg(@rootMj;'dragon.png');      
+    }
+    .list6{
+      .bg(@rootMj;'snake.png');
+    }
+    .list7{
+      .bg(@rootMj;'horse.png');
+    }
+    .list8{
+      .bg(@rootMj;'sheep.png');
+    }
+    .list9{
+      .bg(@rootMj;'monkey.png');      
+    }
+    .list10{
+      .bg(@rootMj;'chicken.png');
+    }
+    .list11{
+      .bg(@rootMj;'dog.png');
+
+    }
+    .list12{
+      .bg(@rootMj;'pig.png');
+    }
+  }
+  .wymj{
+    .bg(@rootMj;'wymj.jpg'); 
+  }
+  .ts{
+    .bg(@rootMj;'ts.jpg'); 
+  }  
+}

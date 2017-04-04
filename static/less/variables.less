@@ -1,0 +1,251 @@
+@charset "UTF-8";
+
+/* 变量声明区域 */
+
+//通用颜色
+@sys-red-bg: #851C20;
+@sys-red-bg-2: #9c1519;
+@sys-red-main: #BE242A;
+@sys-red-deep: #AA2025;
+@sys-red-lighter: #D7343B;
+@sys-red-font: #BD0109;
+@sys-yellow: #FDCB90;
+@sys-white-bg-red: #faf2f2;
+
+@height-nav: .96rem;
+@color-nav: #FFED54;
+
+//通用按钮样式
+@height-btn: .88rem;
+@width-btn: 100%;
+@radius-btn-corner: .15rem;
+@size-btn-corner: @radius-btn-corner * 2;
+@color-btn-corner: @sys-white-bg-red;
+//@color-btn-corner: #fff;
+@color-btn-normal: #b92329;
+@color-btn-lighter: #f7a6a9;
+@color-btn-active: #FE3A42;
+@color-btn-disabled: #7e4b52;
+
+//表單
+@color-form-border: #DBC5C5;
+@color-form-border-focus: #c7363c;
+
+
+//外包
+@root: './../../static/images/';
+@root3: './../../static/images/three/';
+@root3card: './../../static/images/three/top/card/';
+@root3header: './../../static/images/three/top/header/';
+@rootCoupon: "./../../static/images/coupon/";
+@rootYC: "./../../static/images/zxcs/";
+@rootDiandeng: "./../../static/images/diandeng/";
+@rootJinli: "./../../static/images/jinli/";
+@rootZiweiBazi: "./../../static/images/ziweibazi/";
+@rootQifutaiDao: "./../../static/images/qifutai/dao/";
+@rootQifutaiFo: "./../../static/images/qifutai/fo/";
+@rootQifutaiBanner: "./../../static/images/qifutai/banners/";
+@rootBaitaisui: "./../../static/images/baitaisui/";
+@rootBenmingfo: "./../../static/images/benmingfo/";
+@rootDade: "./../../static/images/dade/";
+@rootApps: "./../../static/images/apps/";
+@rootAvatar: "./../../static/images/avatar/";
+@rootMj: "./../../static/images/mj/";
+@rootYuanxiao: "./../../static/images/yuanxiao/";
+@rootGuanyin: "./../../static/images/guanyin/";
+@rootGuanyindc: "./../../static/images/guanyindc/";
+@rootPuxianps: "./../../static/images/puxianps/";
+
+//外包-yc
+@bg-color: @sys-red-bg;
+@border-color: @sys-red-main;
+@card-header-color: @border-color;
+@bg-white-color: #FFF5F3;
+@color-btn-yellow-yc: #f5c419;
+@color-btn-yellow-border-yc: #f9ae2c;
+@color-btn-red-yc: @sys-red-main;
+@color-btn-red-border-yc: #ad1215;
+@border-bottom-active: #D3373D;
+@border-bottom: #F9B5AD;
+
+//外包YC-20161222
+@white: #fff;
+@menu-border: #ffcf33;
+@menu-color: #464646;
+@more-1: #c2daa5;
+@more-2: @white;
+@more-3: @white;
+@more-4: #ffed54;
+@more-5: #ffcda4;
+@more-6: #e8615c;
+@more-7: @more-4;
+@more-8: @more-4;
+
+//外包-mj
+@bg-color: #9C1519;
+@border-color: #BF242A;
+@bg-white-color: #FFF5F3;
+@border-year: #FFE2DF;
+@text-border-color: #F8C6C3;
+@border-bottom-active: #D3373D;
+@border-bottom: #F9B5AD;
+@red-text: #BE2327;
+@tail-color: rgba(62, 8, 10, .7);;
+@read-luck-color: #FFB657;
+@change-luck-color: #C9272A;
+
+//大師親算
+@color-bg-lightred: #f9d5d5;
+@color-bg-white: #ffeded;
+@color-red-qs: #C7363C;
+@color-yellow-qs: #FFED54;
+@color-border-lightred: #f7cbcc;
+@color-grey: #999;
+@color-font-qs: #491114;
+@color-teacher-border: #ebdfdf;
+@color-process-font: #d92034;
+
+//主会场3
+@white: #fff;
+@yellow: rgb(253, 255, 98);
+@red-3: rgb(240, 55, 32);
+
+@bg: rgb(141, 27, 15);
+
+@nav-bg: rgb(242, 58, 69);
+@nav-color: @yellow;
+@nav-color-active: @white;
+
+//---------------------------------------------祈福点灯
+@diandeng-bg: #8d1b0f;
+
+// NAV
+@diandeng-nav-bg: #f33b47;
+@diandeng-nav-color: #ffff5b;
+@diandeng-nav-color-active: #fff;
+
+// INTRO
+@diandeng-intro: #fdd186;
+
+// TITLE
+@diandeng-title: #ebae6f;
+@diandeng-title-strong: #f9ce1d;
+
+// CARD
+@diandeng-card-bg: #f5ead2;
+@diandeng-card-border-outer: #f5ac2f;
+@diandeng-card-border-inner: #cea16a;
+@diandeng-card-title: @diandeng-bg;
+@diandeng-card: #3a3a3a;
+@diandeng-card-button: #861100;
+@diandeng-card-more: #fed844;
+
+// COMMENTS
+@diandeng-comment: @diandeng-card;
+@diandeng-comment-name: #890d0d;
+@diandeng-comment-time: #890d0d;
+
+// FOOTER
+@diandeng-footer-bg: #b62a1c;
+@diandeng-footer: #c2281d;
+
+//----------------------------------------祈福台-道教
+@qifutai-dao-bg-start: #cc470f;
+@qifutai-dao-bg: #ac241a;
+
+@qifutai-dao-black: #333;
+@qifutai-dao-blackless: #474643;
+@qifutai-dao-yellow: #fff13e;
+
+// SECTION
+@qifutai-dao-section-bg: #fff5f3;
+@qifutai-dao-section-border: #6a0c10;
+@qifutai-dao-section-detail: #e73421;
+
+@qifutai-dao-invite-btn: #f0311e;
+
+// NAV
+@qifutai-dao-nav-bg: #f33b47;
+@qifutai-dao-nav-color: @qifutai-dao-yellow;
+@qifutai-dao-nav-color-active: #fff;
+
+// FOOTER
+@qifutai-dao-footer-bg: #f23a45;
+
+//----------------------------------------祈福台-佛教
+@qifutai-fo-bg-start: #ce4b0c;
+@qifutai-fo-bg: #ac241a;
+
+@qifutai-fo-black: #333;
+@qifutai-fo-blackless: #474643;
+@qifutai-fo-yellow: #fff13e;
+
+// SECTION
+@qifutai-fo-section-bg: #fff5f3;
+@qifutai-fo-section-border: #6a0c10;
+
+@qifutai-fo-invite-btn: #f0311e;
+
+// NAV
+@qifutai-fo-nav-bg: #f33b47;
+@qifutai-fo-nav-color: @qifutai-fo-yellow;
+@qifutai-fo-nav-color-active: #fff;
+
+// FOOTER
+@qifutai-fo-footer-bg: #f23a45;
+
+//--------------------------------------拜太岁
+@baitaisui-white: #fff;
+
+@baitaisui-bg: #c01b1a;
+
+// TAB
+@baitaisui-tab: #390005;
+@baitaisui-tab-active: #fff683;
+
+// SECTION1
+@baitaisui-s1: #fde099;
+
+// TITLE
+@baitaisui-title: #fdeee3;
+
+// CARD
+@baitaisui-card-bg: #facd89;
+@baitaisui-card-border: #dc1820;
+@baitaisui-card-button-bg: #c01b1a;
+
+// FOOTER
+@baitaisui-footer-bg: #ffe8c4;
+@baitaisui-footer-red: #f03720;
+@baitaisui-footer-button-bg: #c01b1a;
+@baitaisui-footer-button: #fcdd98;
+
+//---------------------------------------------本命佛
+@benmingfo-header-bg-color  : #ef3e4c;
+@benmingfo-header-text-color: #f9e96e;
+@benmingfo-header-height    : .82rem;
+@benmingfo-banner-bg-color: transparent;
+
+@benmingfo-bg-color: #871820;
+
+//-----------------------------------------------------大德
+@dade-white: #fff;
+@dade-yellow: rgb(253, 255, 98);
+@dade-red: rgb(240, 55, 32);
+
+@dade-bg: rgb(134, 17, 0);
+
+@dade-nav-bg: rgb(242, 58, 69);
+@dade-nav-color: @dade-yellow;
+@dade-nav-color-active: @dade-white;
+
+@dade-card-border: #c73f30;
+@dade-card-bg: #f1efea;
+@dade-card-title: #fdcc27;
+@dade-card-strong: #e73421;
+@dade-card-content: #000;
+@dade-card-ps: #3a3a3a;
+@dade-card-btn: #810606;
+
+@dade-footer-bg: #b62a1c;
+@dade-footer: #c2281d;

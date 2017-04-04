@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+@import "./variables";
+
+.clear(){
+	clear:both;
+	&:after {
+	  display: block;
+	  clear: both;
+	  visibility: hidden;
+	  height: 0;
+	  overflow: hidden;
+	  content: ".";
+	}
+}
+
+//通用自定义checkbox组件
+.mcc-checkbox(@width, @height, @color){
+	.mmc-checkbox{
+		position: relative;
+		margin: 0 auto;
+		background-color: white;
+
+		input[type="checkbox"]{
+			display: none;
+		}
+		input[type="checkbox"]+label {
+			display: inline-block;
+			box-sizing: border-box;
+		}
+		label{
+			position: relative;
+		}
+		label::before {
+			content: "";
+			display: inline-block;
+			width: @width;
+			height: @height;
+			border: 1px solid #c0c0c0;
+			border-radius: 3px;
+			vertical-align: middle;
+			box-sizing: border-box;
+			transition: background ease-in .5s;
+		}
+
+		input[type="checkbox"]:checked+label::before{
+			border-color: @color;
+		}
+		input[type="checkbox"]:checked+label::after{
+			content: "";
+			display: inline-block;
+			width:16/30*@width;
+			height: 6/30*@height;
+			position: absolute;
+			left: 6/30*@width;
+			top: 9/30*@height;
+			border: 2px solid @color;
+			border-width: 0 0 2px 2px;
+			transform: rotate(-45deg);
+		}
+	}
+}
+
+//垂直居中
+.v-middle(){
+	position: relative;
+	top: 50%;
+	transform: translate(0, -50%);
+}
+
+.text-overflow(){
+	white-space:nowrap;
+	text-overflow:ellipsis;
+	overflow:hidden;
+}
+
+.size-100(){
+	width: 100%;
+	height: 100%;
+}
+
+.bg-x(@which) {
+	background-image: url("@{root}@{which}");
+	background-repeat: no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.bg-x-jt(@which) {
+	@strJt: "jt_";
+	background-image: url("@{root}@{strJt}@{which}");
+	background-repeat: no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.bg-x-3(@which) {
+	background-image: url("@{root3}@{which}");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.bg-x-3-jt(@which) {
+	@strJt: "jt_";
+	background-image: url("@{root3}@{strJt}@{which}");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.bg-coupon(@which) {
+	background-image: url("@{rootCoupon}@{which}");
+	background-repeat: no-repeat;
+	-webkit-background-size: 100% 100%;
+	background-size: 100% 100%;
+}
+.bg(@imgPath; @imgName){
+	background-image: url("@{imgPath}@{imgName}");
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}

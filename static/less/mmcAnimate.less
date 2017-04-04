@@ -1,0 +1,167 @@
+.animSet(@duration; @delay){
+  animation-duration: @duration;
+  animation-fill-mode: forwards;
+  animation-delay: @delay;
+}
+.animTranslate(@arg1; @arg2; @arg3){
+  transform: perspective(2rem) translate3d(@arg1, @arg2, @arg3);
+}
+.animRotate(@deg){
+  transform: rotate3d(0,0,1,@deg);
+}
+.pop-coupon{
+
+  .hit-egg{
+    .eb-static{
+      .animSet(.5s; 0);
+      animation-name: god;
+    }
+    .egg{
+      .animSet(1.6s; 0);
+      animation-timing-function: linear;
+      &.one{
+        animation-name: egg1;
+      }
+      &.two{
+        animation-duration: 2.28s;
+        animation-name: egg2;
+      }
+      &.three{
+        animation-name: egg3;
+      }
+      &.break{
+        animation-name: eggBreak;
+        animation-duration: 1.8s;
+        animation-delay: 2.28s;
+      }
+      &.half{
+        animation-name: eggHalf;
+        animation-duration: .3s;
+        animation-delay: 4s;
+      }
+    }
+    .ebd-platform{
+      .animSet(.3s; 0);
+      animation-name: platform;
+      animation-timing-function: linear
+    }
+    .ebd-hammer{
+      .animSet(.8s; 1.6s);
+      animation-name: hammer;
+      animation-timing-function: linear;
+    }
+    .light{
+      .animSet(.4s; 4s);
+      animation-name: light;
+      //animation-timing-function: linear;
+    }
+    .ebs-btn.start{
+      .animSet(.3s; 0);
+      animation-name: btnStart;
+    }
+    .eb-result.show{
+      .animSet(.3s; 4.3s);
+      display: block;
+      animation-name: showResult;
+    }
+    .eb-dynamic{
+      .animSet(.01s; 4.5s);
+      animation-name: hideDynamic;
+    }
+  }
+  .hit-immediately{
+    .eb-static{
+      opacity: 0;
+    }
+    .eb-dynamic{
+      opacity: 0;
+    }
+    .eb-result.show-immediately{
+      .animSet(.3s; 0);
+      display: block;
+      animation-name: showResult;
+    }
+  }
+}
+@keyframes egg1{
+  0% { opacity: 1; .animTranslate(.7rem; -.3rem; -.6rem);}
+  20%{ opacity: 1; .animTranslate(.2rem; -.3rem; -.2rem); } //放大后
+  40%{ opacity: 1; .animTranslate(3.3rem; -.3rem; -.2rem); }  //第一次移动后
+  60%{ opacity: 1; .animTranslate(1.75rem; 0; -.2rem); }  //第二次移动后
+  80%{ opacity: 1; .animTranslate(.2rem; -.3rem; -.2rem); }  //第二次移动后
+  100%{ opacity: 0; .animTranslate(.2rem; -.3rem; -.2rem); }
+}
+
+@keyframes egg2 {
+  //开始转圈
+  0% { .animTranslate(0; 0; -.6rem); opacity: 1; }
+  14%{ .animTranslate(0; 0; -.2rem); }
+  28%{ .animTranslate(-1.55rem; -.3rem; -.2rem); }
+  42%{ .animTranslate(1.55rem; -.3rem; -.2rem); }
+  56%{ .animTranslate(0; 0; -.2rem); }
+  70%{ .animTranslate(0; 0; .1rem); opacity: 1; }
+  99.99% { opacity: 1; }
+  100%{ .animTranslate(0; 0; .1rem); opacity: 0; }
+}
+@keyframes eggBreak {
+  0% { opacity: 0; transform: perspective(2rem) rotate3d(0,0,0,0) translate3d(0, 0, .1rem);}
+  0.01% { opacity: 1; }
+  18.01% { opacity: 1; transform: perspective(2rem) rotate3d(0,0,0,0) translate3d(0, 0, .1rem);}
+  25% { transform: perspective(2rem) rotate3d(0,0,1,-20deg) translate3d(0, 0, .1rem); }
+  40% { transform: perspective(2rem) rotate3d(0,0,1,20deg) translate3d(0, 0, .1rem); }
+  55% { transform: perspective(2rem) rotate3d(0,0,1,-20deg) translate3d(0, 0, .1rem); }
+  70% { transform: perspective(2rem) rotate3d(0,0,1,20deg) translate3d(0, 0, .1rem); }
+  85% { transform: perspective(2rem) rotate3d(0,0,1,-20deg) translate3d(0, 0, .1rem); }
+  92% { transform: perspective(2rem) rotate3d(0,0,0,0) translate3d(0, 0, .1rem); opacity: 1; }
+  99.99% { opacity: 1; }
+  100% { transform: perspective(2rem) rotate3d(0,0,0,0) translate3d(0, 0, .1rem); opacity: 0; }
+}
+@keyframes eggHalf {
+  0% { opacity: 0; }
+  0.01% { opacity: 1; }
+  100% { opacity: 1; }
+}
+
+@keyframes egg3 {
+  0% { opacity: 1; .animTranslate(-.7rem; -.3rem; -.6rem); }
+  20%{ opacity: 1; .animTranslate(-.2rem; -.3rem; -.2rem); }
+  40%{ opacity: 1; .animTranslate(-1.75rem; 0; -.2rem); }
+  60%{ opacity: 1; .animTranslate(-3.3rem; -.3rem; -.2rem); }
+  80%{ opacity: 1; .animTranslate(-.2rem; -.3rem; -.2rem); }
+  100%{ opacity: 0; .animTranslate(-.2rem; -.3rem; -.2rem); }
+}
+
+@keyframes platform {
+  0% { transform: translate3d(-50%, 0, 0) scale3d(1,1,1); }
+  //20%{ transform: translate3d(-50%, 0, 0) scale3d(1,1,1); }
+  100%{ transform: translate3d(-50%, 0, 0) scale3d(1.5,1.5,1.5); }
+}
+
+@keyframes god {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+@keyframes hammer {
+  0% { opacity: 0; }
+  25% { opacity: 1; .animRotate(0); }
+  50% { .animRotate(20deg); }
+  75% { .animRotate(0); }
+  100% { opacity: 1; }
+}
+@keyframes light {
+  0% { opacity: 0; .animTranslate(0; 0; -.6rem); }
+  100% { opacity: .5; .animTranslate(0; -.1rem; 0); }
+}
+
+@keyframes btnStart {
+  0% { opacity: 1 }
+  100% { opacity: 0 }
+}
+@keyframes showResult {
+  0% { transform: scale3d(0,0,0) }
+  100% { transform: scale3d(1,1,1) }
+}
+@keyframes hideDynamic {
+  0% { opacity: 1 }
+  100% { opacity: 0 }
+}

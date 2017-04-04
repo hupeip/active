@@ -1,0 +1,27 @@
+{
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true
+    },
+    "root": true,
+    "extends": "standard",
+    "parser": "babel-eslint",
+    "plugins": [
+        "html",
+        "vue"
+    ],
+    "rules": {
+        "arrow-parens": 0,
+        "indent": 0,
+        "eol-last": 0,
+        "semi": ["error", "always"],
+        "space-before-function-paren": 0,
+        "no-useless-escape": 0,
+        "quotes": ["error", "single"],
+        "no-mixed-spaces-and-tabs": "off",
+        "no-extra-boolean-cast": "off",
+        "no-console": ["warn", { allow: ["warn", "error"] }],
+        "no-tabs": "off"
+    }
+}
