@@ -8,9 +8,6 @@ var GoApp = require('./goApp.js');
 Object.prototype.document = window.document;
 Object.prototype.location = window.location;
 require('zepto/dist/zepto');
-// import $ from 'zepto/dist/zepto.min';
-
-// console.log( $ );
 delete(Object.prototype.document);
 delete(Object.prototype.location);
 
