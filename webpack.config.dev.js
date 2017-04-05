@@ -20,16 +20,13 @@ module.exports = merge(WebpackConfig, {
         new webpack.DefinePlugin({
             'process.env': JSON.stringify('devlopment')
         }),
-        // extract css into its own file
         new ExtractTextPlugin({
             filename: 'css/[name].css',
             allChunks: true
         }),
-        // https://github.com/glenjamin/webpack-hot-middleware#installation--usage
         new webpack.HotModuleReplacementPlugin(),
         new webpack.NoEmitOnErrorsPlugin(),
         new OptimizeCSSPlugin(),
-        // https://github.com/ampedandwired/html-webpack-plugin
         new HtmlWebpackPlugin({
             filename: 'index.html',
             template: 'index.html',

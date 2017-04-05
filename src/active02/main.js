@@ -2,7 +2,8 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import App from './App';
 import routes from './router';
-import publicJS from '../../static/lib/public';
+// import publicJS from '../../static/lib/public';
+import '../assets/css/style.less';
 
 // 声明使用vue-router
 Vue.use(VueRouter);
@@ -12,7 +13,10 @@ const router = new VueRouter({
 	routes
 });
 
-publicJS.selfAdaptive();
+window.onload = function() {
+	// publicJS.setCNLang();
+};
+
 // 开始应用
 /* eslint-disable no-new */
 new Vue({

@@ -1,31 +1,29 @@
 <template>
   <div>
-  	<h1>teststst001</h1>
-    <div @click="goApp" data-gotype="3" data-controller="guanyin" data-type="1">我的APP 零机文化 国</div>
-  	<img src="../../assets/img/logo.png">
-    <img src="../../assets/img/001.jpg">
+    <!-- <div @click="goApp" data-gotype="16" data-controller="bmfapp" data-type="0">我的APP 零机文化 国</div> -->
+    <Common></Common>
   </div>
 </template>
 
 <script>
 import publicJS from '../../../static/lib/public';
+import Common from '../components/common';
 export default {
   methods: {
     goApp(e) {
-      console.log('111');
-      publicJS.goAPP(e, 'guanyin');
+      publicJS.goAPP(e, 'bmfapp');
     }
+  },
+  components: {
+    Common: Common
   }
 };
 </script>
-<style scoped>
-  .box-card{
-    width: 600px;
-  }
+<style lang="less" scoped>
   h1 {
   	color:red;
   	height:300px;
   	width:300px;
-  	background: url(../../assets/img/logo.png);
+  	background: url(../images/fu.jpg);
   }
 </style>
