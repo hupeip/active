@@ -20,7 +20,7 @@ export default {
 </script>
 <style lang="less" scoped>
   .g-wrap{
-    font-size: 0.12rem;
+    font-size: 0.14rem;
   }
   .box .banner{
     height: 7.11rem;
@@ -31,7 +31,7 @@ export default {
     color: #a48d28;
   }
   .text{
-    padding: 0.14rem 0.25rem 0.4rem;
+    padding: 0.29rem 0.5rem 0.8rem;
     background-color: #1a0805;
     color: #b49c7e;
     margin-top: -0.01rem;
