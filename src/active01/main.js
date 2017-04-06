@@ -12,7 +12,9 @@ const router = new VueRouter({
 	routes
 });
 
+// 这里是适应手机屏幕的,调用这个方法，尺寸就可以按照设计稿来  0.1rem = 10px
 publicJS.selfAdaptive();
+
 // 开始应用
 /* eslint-disable no-new */
 new Vue({
